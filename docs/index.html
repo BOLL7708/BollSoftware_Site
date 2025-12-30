@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        BOLL Software
+    </title>
+    <style>
+        :root {
+            --fg: linear-gradient(lightgoldenrodyellow, pink);             
+            --bg: #333;
+            --hi: #eee;
+            --sh: #222;
+            --fgtxt: #333;
+            --bgtxt: #ddd;
+            --txt_shadow: 0 2px 4px color-mix(in srgb, var(--sh), transparent 75%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --fg: linear-gradient(darkgoldenrod, darkred);
+                --bg: #111;
+                --hi: #555;
+                --sh: #000;
+                --fgtxt: #bbb;
+                --bgtxt: #ddd;
+            }
+        }
+
+        body {
+            font-family: sans-serif;
+            font-weight: bold;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            min-width: 100%;
+            min-height: 100%;
+            background: var(--bg);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            font-size: 200%;
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px;
+
+            color: var(--fgtxt);
+            background: var(--fg);
+            
+            box-shadow:
+                inset 0 2px 4px var(--hi),
+                inset 0 1px 2px var(--hi),
+                0 2px 4px var(--sh),
+                0 4px 8px var(--sh),
+                inset 0 -2px 4px var(--sh);
+        }
+
+        h1 {
+            text-align: center;
+            margin: 10px 0;
+            text-shadow: var(--txt_shadow);
+        }
+
+        h2 {
+            margin: 15px 0 5px 0;
+            text-shadow: var(--txt_shadow);
+        }
+
+        ul {
+            padding: 0 0 0 32px;
+            margin: 0;
+            list-style: none;
+        }
+
+        a {
+            border-radius: 8px;
+            padding: 1px 8px;
+            color: var(--fgtxt);
+            text-decoration: none;
+            text-shadow: var(--txt_shadow);
+            transition: color 0.125s, background-color 0.125s;
+        }
+
+        a:visited {
+            color: var(--fgtxt);
+        }
+
+        a:hover {
+            color: var(--bgtxt);
+            background-color: var(--bg);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>BOLL Software</h1>
+    </div>
+    <div>
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://bsky.app/profile/boll.software">Bluesky</a></li>
+            <li><a href="https://github.com/boll7708">Github</a></li>
+            <li><a href="https://www.patreon.com/c/BOLL">Patreon</a></li>
+            <li><a href="https://www.twitch.tv/boll_software">Twitch</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Projects in Progress</h2>
+        <ul>
+            <li><a href="https://github.com/BOLL7708/ActionBot">ActionBot</a></li>
+            <li><a href="">BOLL's VR Toolkit</a></li>
+            <li><a href="https://github.com/BOLL7708/EasyOpenVR">EasyOpenVR</a></li>
+            <li><a href="">Steam Soundtrack Harmonizer</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Finished Projects</h2>
+        <ul>
+            <li><a href="https://github.com/BOLL7708/OpenVR2Key">OpenVR2Key</a></li>
+            <li><a href="https://github.com/BOLL7708/OpenVROverlayPipe">OpenVROverlayPipe</a></li>
+            <li><a href="https://github.com/BOLL7708/OpenVRStartup">OpenVRStartup</a></li>
+            <li><a href="https://github.com/BOLL7708/OpenVR2WS">OpenVR2WS</a></li>
+            <li><a href="https://github.com/BOLL7708/SuperScreenShotterVR">SuperScreenShotterVR</a></li>
+            <li><a href="https://boll.itch.io/wimfov">WIMFOV</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
