@@ -7,28 +7,28 @@
     </title>
     <style>
         :root {
-            --fg: hsl(0 0 90%);
-            --bg: hsl(0 0 100%);
-            --hi: hsl(0 0 95%);
-            --sh: hsl(0 0 50%);
-            --fgtxt: hsl(0 0 30%);
-            --bgtxt: hsl(0 0 40%);
+            --fg: hsl(50 25 90);
+            --bg: hsl(0 0 100);
+            --hi: hsl(50 25 95);
+            --sh: hsl(50 25 75);
+            --fgtxt: hsl(0 0 0 / 70%);
+            --bgtxt: hsl(0 0 0 / 60%);
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --fg: hsl(0 0 30%);
-                --bg: hsl(0 0 20%);
-                --hi: hsl(0 0 60%);
-                --sh: hsl(0 0 10%);
-                --fgtxt: hsl(0 0 70%);
-                --bgtxt: hsl(0 0 60%);
+                --fg: hsl(50 25 15);
+                --bg: hsl(0 0 15);
+                --hi: hsl(50 25 20);
+                --sh: hsl(50 25 10);
+                --fgtxt: hsl(0 0 100 / 70%);
+                --bgtxt: hsl(0 0 100 / 60%);
             }
         }
 
         body {
             font-family: sans-serif;
-            font-weight: bold;
+            /*font-weight: bold;*/
             display: flex;
             align-content: center;
             justify-content: center;
@@ -37,10 +37,10 @@
 
         .container {
             height: min-content;
-            font-size: 200%;
             border-radius: 16px;
             padding: 32px;
             margin: 32px;
+            font-size: 16px;
 
             color: var(--fgtxt);
             background: var(--fg);
@@ -53,32 +53,27 @@
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 32px;
             text-align: center;
             margin: 10px 0;
         }
 
         h2 {
-            font-size: 32px;
+            font-size: 24px;
             margin: 15px 0 5px 0;
         }
 
         ul {
-            padding: 0 0 0 32px;
+            padding: 0 0 0 16px;
             margin: 0;
-            list-style: none;
-        }
-
-        li {
-            font-size: 24px;
         }
 
         a {
+            font-weight: bold;
             border-radius: 8px;
             padding: 1px 8px;
             color: var(--fgtxt);
             text-decoration: none;
-            transition: color 0.125s, background-color 0.125s;
         }
 
         a:visited {
@@ -86,7 +81,7 @@
         }
 
         a:hover {
-            color: var(--bgtxt);
+            filter: invert(1);
             background-color: var(--bg);
         }
     </style>
@@ -95,35 +90,39 @@
 <div class="container">
     <div>
         <h1>BOLL Software</h1>
+        <p>My collection of hobby projects, available freely without warranty.</p>
     </div>
     <div>
         <h2>Links</h2>
+        <p>Social links to various platforms.</p>
         <ul>
-            <li><a href="https://bsky.app/profile/boll.software">Bluesky</a></li>
-            <li><a href="https://discord.gg/Cdt4xjqV35">Discord</a></li>
-            <li><a href="https://github.com/boll7708">Github</a></li>
-            <li><a href="https://www.patreon.com/c/BOLL">Patreon</a></li>
-            <li><a href="https://www.twitch.tv/boll_software">Twitch</a></li>
+            <li><a href="https://bsky.app/profile/boll.software">Bluesky</a>- Sporadic musings about anything.</li>
+            <li><a href="https://discord.gg/Cdt4xjqV35">Discord</a>- The official server for my projects.</li>
+            <li><a href="https://github.com/boll7708">Github</a>- Where to find source code and releases.</li>
+            <li><a href="https://www.patreon.com/c/BOLL">Patreon</a>- Dev updates, lessons learned and examples.</li>
+            <li><a href="https://www.twitch.tv/boll_software">Twitch</a>- Where coding is occasionally streamed.</li>
         </ul>
     </div>
     <div>
         <h2>Projects in Progress</h2>
+        <p>Projects that are unfinished that are currently being worked on.</p>
         <ul>
-            <li><a href="https://github.com/BOLL7708/ActionBot">ActionBot</a></li>
-            <li><a href="">BOLL's VR Toolkit</a></li>
-            <li><a href="https://github.com/BOLL7708/EasyOpenVR">EasyOpenVR</a></li>
-            <li><a href="">Steam Soundtrack Harmonizer</a></li>
+            <li><a href="https://github.com/BOLL7708/ActionBot">ActionBot</a>- Bot for Twitch streamers.</li>
+            <li><a href="https://github.com/BOLL7708/BVRTK">BOLL's VR Toolkit</a>- Software suite that extends SteamVR.</li>
+            <li><a href="https://github.com/BOLL7708/EasyOpenVR">EasyOpenVR</a>- Convenience C# OpenVR class library.</li>
+            <li><a href="https://github.com/BOLL7708/SSH">Steam Soundtrack Harmonizer</a>- Download and fix tags.</li>
         </ul>
     </div>
     <div>
         <h2>Finished Projects</h2>
+        <p>Projects that have been finished and are only maintained as needed.</p>
         <ul>
-            <li><a href="https://github.com/BOLL7708/OpenVR2Key">OpenVR2Key</a></li>
-            <li><a href="https://github.com/BOLL7708/OpenVROverlayPipe">OpenVROverlayPipe</a></li>
-            <li><a href="https://github.com/BOLL7708/OpenVRStartup">OpenVRStartup</a></li>
-            <li><a href="https://github.com/BOLL7708/OpenVR2WS">OpenVR2WS</a></li>
-            <li><a href="https://github.com/BOLL7708/SuperScreenShotterVR">SuperScreenShotterVR</a></li>
-            <li><a href="https://boll.itch.io/wimfov">WIMFOV</a></li>
+            <li><a href="https://github.com/BOLL7708/OpenVR2Key">OpenVR2Key</a>- Simulate keyboard keys from VR input.</li>
+            <li><a href="https://github.com/BOLL7708/OpenVR2WS">OpenVR2WS</a>- WebSocket server for VR I/O and settings.</li>
+            <li><a href="https://github.com/BOLL7708/OpenVROverlayPipe">OpenVROverlayPipe</a>- Spawn VR overlays from images.</li>
+            <li><a href="https://github.com/BOLL7708/OpenVRStartup">OpenVRStartup</a>- Run scripts on launch/exit of SteamVR.</li>
+            <li><a href="https://github.com/BOLL7708/SuperScreenShotterVR">SuperScreenShotterVR</a>- Extends SteamVR screenshots.</li>
+            <li><a href="https://boll.itch.io/wimfov">WIMFOV</a>- Measure your effective headset field of view.</li>
         </ul>
     </div>
 </div>
