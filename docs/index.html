@@ -41,7 +41,7 @@
         }
 
         .container {
-            max-width: 768px;
+            max-width: 512px;
             height: min-content;
             border-radius: 16px;
             padding: 32px;
@@ -88,10 +88,15 @@
         }
 
         iframe {
+            height: 32px;
+            width: 114px;
+            border: none;
             border-radius: 8px;
             box-shadow: var(--shadow-big);
-            width: 100%;
-            border: none;
+        }
+
+        .center {
+            text-align: center;
         }
     </style>
 </head>
@@ -138,7 +143,7 @@
     <div>
         <h2>Support Me</h2>
         <p>Since 2026 I've enrolled in the GitHub Sponsors program, this as I have over the years gotten multiple inquiries for a way to support me, this enables that.</p>
-        <iframe src="https://github.com/sponsors/BOLL7708/card" title="Sponsor BOLL7708"></iframe>
+        <div class="center"><iframe src="https://github.com/sponsors/BOLL7708/button" title="Sponsor BOLL7708"></iframe></div>
     </div>
 </div>
 </body>
