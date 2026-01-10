@@ -13,14 +13,20 @@
             --sh: hsl(50 25 75);
             --fgtxt: hsl(0 0 0 / 70%);
             --bgtxt: hsl(0 0 0 / 60%);
+
+            --shadow-big: inset 0 2px 4px var(--hi),
+            inset 0 1px 2px var(--hi),
+            0 2px 4px var(--sh),
+            0 4px 8px var(--sh),
+            inset 0 -2px 4px var(--sh);
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --fg: hsl(50 25 15);
-                --bg: hsl(0 0 15);
-                --hi: hsl(50 25 20);
-                --sh: hsl(50 25 10);
+                --fg: #212830;
+                --bg: #0D1117;
+                --hi: color-mix(in srgb, var(--fg), white 10%);
+                --sh: color-mix(in srgb, var(--bg), black 10%);
                 --fgtxt: hsl(0 0 100 / 70%);
                 --bgtxt: hsl(0 0 100 / 60%);
             }
@@ -28,7 +34,6 @@
 
         body {
             font-family: sans-serif;
-            /*font-weight: bold;*/
             display: flex;
             align-content: center;
             justify-content: center;
@@ -36,6 +41,7 @@
         }
 
         .container {
+            max-width: 768px;
             height: min-content;
             border-radius: 16px;
             padding: 32px;
@@ -45,11 +51,7 @@
             color: var(--fgtxt);
             background: var(--fg);
 
-            box-shadow: inset 0 2px 4px var(--hi),
-            inset 0 1px 2px var(--hi),
-            0 2px 4px var(--sh),
-            0 4px 8px var(--sh),
-            inset 0 -2px 4px var(--sh);
+            box-shadow: var(--shadow-big);
         }
 
         h1 {
@@ -84,24 +86,32 @@
             filter: invert(1);
             background-color: var(--bg);
         }
+
+        iframe {
+            border-radius: 8px;
+            box-shadow: var(--shadow-big);
+            width: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div>
         <h1>BOLL Software</h1>
-        <p>My collection of hobby projects, available freely without warranty.</p>
+        <p>Hello!</p>
+        <p>I'm Andreas "BOLL" Aronsson, and below is my collection of hobby projects, available freely without warranty.</p>
     </div>
     <div>
-        <h2>Links</h2>
-        <p>Social links to various platforms.</p>
+        <h2>Finished Projects</h2>
+        <p>Projects that have been finished and are only maintained as needed.</p>
         <ul>
-            <li><a href="https://bsky.app/profile/boll.software">Bluesky</a>- Sporadic musings about anything.</li>
-            <li><a href="https://discord.gg/Cdt4xjqV35">Discord</a>- The official server for my projects.</li>
-            <li><a href="https://github.com/boll7708">Github</a>- Where to find source code and releases.</li>
-<!--            <li><a href="https://www.patreon.com/c/BOLL">Patreon</a>- Dev updates, lessons learned and examples.</li>-->
-            <li><a href="https://www.twitch.tv/boll_software">Twitch for coding</a>- Where coding is occasionally streamed.</li>
-            <li><a href="https://www.twitch.tv/boll7708">Twitch for gaming</a>- Where gaming is occasionally streamed.</li>
+            <li><a href="https://github.com/BOLL7708/OpenVR2Key">OpenVR2Key</a>- Simulate keyboard keys from VR input.</li>
+            <li><a href="https://github.com/BOLL7708/OpenVR2WS">OpenVR2WS</a>- WebSocket server for VR I/O and settings.</li>
+            <li><a href="https://github.com/BOLL7708/OpenVROverlayPipe">OpenVROverlayPipe</a>- Spawn VR overlays from images.</li>
+            <li><a href="https://github.com/BOLL7708/OpenVRStartup">OpenVRStartup</a>- Run scripts on launch/exit of SteamVR.</li>
+            <li><a href="https://github.com/BOLL7708/SuperScreenShotterVR">SuperScreenShotterVR</a>- Extends SteamVR screenshots.</li>
+            <li><a href="https://boll.itch.io/wimfov">WIMFOV</a>- Measure your effective headset field of view.</li>
         </ul>
     </div>
     <div>
@@ -115,16 +125,20 @@
         </ul>
     </div>
     <div>
-        <h2>Finished Projects</h2>
-        <p>Projects that have been finished and are only maintained as needed.</p>
+        <h2>Links</h2>
+        <p>Social links to various platforms.</p>
         <ul>
-            <li><a href="https://github.com/BOLL7708/OpenVR2Key">OpenVR2Key</a>- Simulate keyboard keys from VR input.</li>
-            <li><a href="https://github.com/BOLL7708/OpenVR2WS">OpenVR2WS</a>- WebSocket server for VR I/O and settings.</li>
-            <li><a href="https://github.com/BOLL7708/OpenVROverlayPipe">OpenVROverlayPipe</a>- Spawn VR overlays from images.</li>
-            <li><a href="https://github.com/BOLL7708/OpenVRStartup">OpenVRStartup</a>- Run scripts on launch/exit of SteamVR.</li>
-            <li><a href="https://github.com/BOLL7708/SuperScreenShotterVR">SuperScreenShotterVR</a>- Extends SteamVR screenshots.</li>
-            <li><a href="https://boll.itch.io/wimfov">WIMFOV</a>- Measure your effective headset field of view.</li>
+            <li><a href="https://bsky.app/profile/boll.software">Bluesky</a>- Sporadic musings about anything.</li>
+            <li><a href="https://discord.gg/Cdt4xjqV35">Discord</a>- The official server for my projects.</li>
+            <li><a href="https://github.com/boll7708">Github</a>- Where to find source code and releases.</li>
+            <li><a href="https://www.twitch.tv/boll_software">Twitch for coding</a>- Where coding is occasionally streamed.</li>
+            <li><a href="https://www.twitch.tv/boll7708">Twitch for gaming</a>- Where gaming is occasionally streamed.</li>
         </ul>
+    </div>
+    <div>
+        <h2>Support Me</h2>
+        <p>Since 2026 I've enrolled in the GitHub Sponsors program, this as I have over the years gotten multiple inquiries for a way to support me, this enables that.</p>
+        <iframe src="https://github.com/sponsors/BOLL7708/card" title="Sponsor BOLL7708"></iframe>
     </div>
 </div>
 </body>
