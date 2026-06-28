@@ -55,9 +55,12 @@
         }
 
         h1 {
+            display: flex;
             font-size: 32px;
             text-align: center;
             margin: 10px 0;
+            align-items: center;
+            justify-content: center;
         }
 
         h2 {
@@ -98,13 +101,19 @@
         .center {
             text-align: center;
         }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            opacity: 70%;
+            padding-right: 8px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div>
-        <h1>BOLL Software</h1>
-        <p>Hello!</p>
+        <h1><img src="logo.svg" alt="BOLL SOFTWARE LOGO" class="logo">BOLL SOFTWARE</h1>
         <p>I'm Andreas "BOLL" Aronsson, and below is my collection of hobby projects, available freely without warranty.</p>
     </div>
     <div>
